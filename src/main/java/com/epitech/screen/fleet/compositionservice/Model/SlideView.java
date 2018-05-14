@@ -12,7 +12,7 @@ public class SlideView extends AModule {
     public SlideView() {
     }
 
-    public SlideView(long id) {
+    public SlideView(Long id) {
         super(id);
     }
 
@@ -21,7 +21,7 @@ public class SlideView extends AModule {
         this.slides = slides;
     }
 
-    public SlideView(long id, int nbSlides, List<AModule> slides) {
+    public SlideView(Long id, int nbSlides, List<AModule> slides) {
         super(id);
         this.nbSlides = nbSlides;
         this.slides = slides;

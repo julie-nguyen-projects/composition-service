@@ -12,7 +12,7 @@ public class BaseModule extends AModule {
     public BaseModule() {
     }
 
-    public BaseModule(long id) {
+    public BaseModule(Long id) {
         super(id);
     }
 
@@ -20,7 +20,7 @@ public class BaseModule extends AModule {
         this.media = media;
     }
 
-    public BaseModule(long id, Media media) {
+    public BaseModule(Long id, Media media) {
         super(id);
         this.media = media;
     }

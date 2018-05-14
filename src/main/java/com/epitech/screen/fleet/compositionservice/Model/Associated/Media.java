@@ -2,7 +2,7 @@ package com.epitech.screen.fleet.compositionservice.Model.Associated;
 
 public class Media {
 
-    private long id;
+    private Long id;
     private String name;
     private String path;
     private MediaType type;
@@ -10,18 +10,18 @@ public class Media {
     public Media() {
     }
 
-    public Media(long id, String name, String path, MediaType type) {
+    public Media(Long id, String name, String path, MediaType type) {
         this.id = id;
         this.name = name;
         this.path = path;
         this.type = type;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

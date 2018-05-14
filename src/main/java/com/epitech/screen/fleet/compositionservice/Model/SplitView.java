@@ -12,11 +12,11 @@ public class SplitView extends AModule {
     public SplitView() {
     }
 
-    public SplitView(long id) {
+    public SplitView(Long id) {
         super(id);
     }
 
-    public SplitView(long id, AModule content1, AModule content2, TypeSplit typeSplit) {
+    public SplitView(Long id, AModule content1, AModule content2, TypeSplit typeSplit) {
         super(id);
         this.content1 = content1;
         this.content2 = content2;
