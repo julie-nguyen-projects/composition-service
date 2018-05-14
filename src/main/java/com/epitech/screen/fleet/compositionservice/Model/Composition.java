@@ -1,7 +1,6 @@
 package com.epitech.screen.fleet.compositionservice.Model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Composition {
@@ -9,6 +8,9 @@ public class Composition {
     @Id
     private Long id;
 
+    @OneToOne(fetch = FetchType.LAZY,
+            cascade =  CascadeType.ALL,
+            mappedBy = "composition")
     private AModule module;
 
     public Composition() {
