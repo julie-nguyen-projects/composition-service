@@ -9,5 +9,27 @@ public class BaseModule extends AModule {
 
     private Media media;
 
+    public BaseModule() {
+    }
 
+    public BaseModule(long id) {
+        super(id);
+    }
+
+    public BaseModule(Media media) {
+        this.media = media;
+    }
+
+    public BaseModule(long id, Media media) {
+        super(id);
+        this.media = media;
+    }
+
+    public Media getMedia() {
+        return media;
+    }
+
+    public void setMedia(Media media) {
+        this.media = media;
+    }
 }
