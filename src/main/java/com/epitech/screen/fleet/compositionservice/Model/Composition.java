@@ -1,9 +1,10 @@
 package com.epitech.screen.fleet.compositionservice.Model;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
-public class Composition {
+public class Composition implements Serializable {
 
     @Id
     private Long id;

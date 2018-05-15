@@ -1,6 +1,8 @@
 package com.epitech.screen.fleet.compositionservice.Model.Associated;
 
-public class Media {
+import java.io.Serializable;
+
+public class Media implements Serializable {
 
     private Long id;
     private String name;

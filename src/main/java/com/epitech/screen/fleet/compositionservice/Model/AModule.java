@@ -1,37 +1,20 @@
 package com.epitech.screen.fleet.compositionservice.Model;
 
-import javax.persistence.FetchType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
+import java.io.Serializable;
 
-public abstract class AModule {
+@Entity
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+public abstract class AModule implements Serializable {
 
     @Id
     private Long id;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "composition_id", nullable = false)
+    @OneToOne
+    @JoinColumn(name = "composition_id")
     private Composition composition;
 
     public AModule() {
-    }
-
-    public AModule(Long id) {
-        this.id = id;
-    }
-
-    public AModule(Long id, Composition composition) {
-        this.id = id;
-        this.composition = composition;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public Composition getComposition() {

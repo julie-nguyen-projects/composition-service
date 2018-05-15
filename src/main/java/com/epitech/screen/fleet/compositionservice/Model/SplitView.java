@@ -1,26 +1,18 @@
 package com.epitech.screen.fleet.compositionservice.Model;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.Serializable;
 
 @Entity
 public class SplitView extends AModule {
+
 
     private AModule content1;
     private AModule content2;
     private TypeSplit typeSplit;
 
     public SplitView() {
-    }
-
-    public SplitView(Long id) {
-        super(id);
-    }
-
-    public SplitView(Long id, AModule content1, AModule content2, TypeSplit typeSplit) {
-        super(id);
-        this.content1 = content1;
-        this.content2 = content2;
-        this.typeSplit = typeSplit;
     }
 
     public SplitView(AModule content1, AModule content2, TypeSplit typeSplit) {
