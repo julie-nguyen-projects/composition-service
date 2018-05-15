@@ -1,11 +1,13 @@
 package com.epitech.screen.fleet.compositionservice.Model;
 
 import javax.persistence.Entity;
+import java.util.ArrayList;
 
 @Entity
 public class SlideView extends AModule {
 
     private int nbSlides;
+    private ArrayList slides;
 
     public SlideView() {
     }
@@ -22,4 +24,12 @@ public class SlideView extends AModule {
         this.nbSlides = nbSlides;
     }
 
+
+    public ArrayList getSlides() {
+        return slides;
+    }
+
+    public void setSlides(ArrayList slides) {
+        this.slides = slides;
+    }
 }
