@@ -43,6 +43,7 @@ public class BaseModuleController {
             System.out.println("A new composition cannot have an ID");
             return null;
         }
+        // TODO retrouver le média grâce au service média
         BaseModule newBaseModule = baseModuleRepository.save(baseModule);
         return newBaseModule;
     }

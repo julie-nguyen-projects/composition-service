@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class SlideView extends AModule {
 
     private int nbSlides;
-    private ArrayList slides;
+    private ArrayList slides = new ArrayList();
 
     public SlideView() {
     }

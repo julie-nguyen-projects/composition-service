@@ -1,26 +1,24 @@
 package com.epitech.screen.fleet.compositionservice.Model;
 
-import com.epitech.screen.fleet.compositionservice.Model.Associated.Media;
-
 import javax.persistence.Entity;
 
 @Entity
 public class BaseModule extends AModule {
 
-    private Media media;
+    private Long mediaId;
 
     public BaseModule() {
     }
 
-    public BaseModule(Media media) {
-        this.media = media;
+    public BaseModule(Long mediaId) {
+        this.mediaId = mediaId;
     }
 
-    public Media getMedia() {
-        return media;
+    public Long getMediaId() {
+        return mediaId;
     }
 
-    public void setMedia(Media media) {
-        this.media = media;
+    public void setMediaId(Long mediaId) {
+        this.mediaId = mediaId;
     }
 }

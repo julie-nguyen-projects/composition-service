@@ -1,5 +1,7 @@
 package com.epitech.screen.fleet.compositionservice.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -11,23 +13,13 @@ public abstract class AModule implements Serializable {
     @GeneratedValue(strategy = GenerationType.TABLE)
     protected Long id;
 
-    @OneToOne
-    @JoinColumn(name = "composition_id")
+    @JsonIgnore
+    @OneToOne(optional = false)
+    @JoinColumn(name = "composition_id", nullable = false)
     protected Composition composition;
-
-    public AModule() {
-    }
-
-    public AModule(Composition composition) {
-        this.composition = composition;
-    }
 
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public Composition getComposition() {

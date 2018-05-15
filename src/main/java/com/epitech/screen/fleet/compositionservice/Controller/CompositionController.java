@@ -24,7 +24,7 @@ public class CompositionController {
         return compositionRepository.findById(id);
     }
 
-    @DeleteMapping("compositions/{id}")
+    @DeleteMapping("/compositions/{id}")
     public String deleteComposition(@PathVariable Long id) {
         System.out.println("DELETE COMPOSITION WITH ID : " + id);
         try {
