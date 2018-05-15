@@ -8,13 +8,26 @@ import java.io.Serializable;
 public abstract class AModule implements Serializable {
 
     @Id
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.TABLE)
+    protected Long id;
 
     @OneToOne
     @JoinColumn(name = "composition_id")
-    private Composition composition;
+    protected Composition composition;
 
     public AModule() {
+    }
+
+    public AModule(Composition composition) {
+        this.composition = composition;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Composition getComposition() {

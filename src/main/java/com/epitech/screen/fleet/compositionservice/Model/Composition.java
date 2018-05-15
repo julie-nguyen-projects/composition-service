@@ -7,6 +7,7 @@ import java.io.Serializable;
 public class Composition implements Serializable {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @OneToOne(fetch = FetchType.LAZY,
