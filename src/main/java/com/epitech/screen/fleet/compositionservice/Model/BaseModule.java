@@ -3,7 +3,6 @@ package com.epitech.screen.fleet.compositionservice.Model;
 import com.epitech.screen.fleet.compositionservice.Model.Associated.Media;
 
 import javax.persistence.Entity;
-import javax.persistence.Id;
 
 @Entity
 public class BaseModule extends AModule {
