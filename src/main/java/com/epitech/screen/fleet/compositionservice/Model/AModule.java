@@ -14,9 +14,12 @@ public abstract class AModule implements Serializable {
     protected Long id;
 
     @JsonIgnore
-    @OneToOne(optional = false)
-    @JoinColumn(name = "composition_id", nullable = false)
+    @OneToOne
+    @JoinColumn(name = "composition_id")
     protected Composition composition;
+
+    public AModule() {
+    }
 
     public Long getId() {
         return id;
