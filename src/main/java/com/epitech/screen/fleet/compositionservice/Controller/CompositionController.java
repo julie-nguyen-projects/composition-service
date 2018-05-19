@@ -14,16 +14,19 @@ public class CompositionController {
     @Autowired
     private CompositionRepository compositionRepository;
 
+    @CrossOrigin(origins = "http://localhost:8080")
     @GetMapping("/compositions")
     public List<Composition> getAllCompositions() {
         return compositionRepository.findAll();
     }
 
+    @CrossOrigin(origins = "http://localhost:8080")
     @GetMapping("/compositions/{id}")
     public Optional<Composition> getCompositionById(@PathVariable Long id) {
         return compositionRepository.findById(id);
     }
 
+    @CrossOrigin(origins = "http://localhost:8080")
     @DeleteMapping("/compositions/{id}")
     public String deleteComposition(@PathVariable Long id) {
         System.out.println("DELETE COMPOSITION WITH ID : " + id);
@@ -35,6 +38,7 @@ public class CompositionController {
         return "Done";
     }
 
+    @CrossOrigin(origins = "http://localhost:8080")
     @PostMapping("/compositions")
     public Composition createComposition(@RequestBody Composition composition) {
         System.out.println("REST REQUEST to save Composition : " + composition);
@@ -47,6 +51,7 @@ public class CompositionController {
         return newComp;
     }
 
+    @CrossOrigin(origins = "http://localhost:8080")
     @PutMapping("/compositions")
     public Composition updateComposition(@RequestBody Composition composition) {
         System.out.println("REST REQUEST to update Composition : " + composition);
