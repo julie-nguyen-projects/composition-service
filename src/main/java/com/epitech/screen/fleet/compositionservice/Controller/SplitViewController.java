@@ -13,16 +13,19 @@ public class SplitViewController {
     @Autowired
     private SplitViewRepository splitViewRepository;
 
+    @CrossOrigin(origins = "http://localhost:8080")
     @GetMapping("/split-views")
     public List<SplitView> getAllCompositions() {
         return splitViewRepository.findAll();
     }
 
+    @CrossOrigin(origins = "http://localhost:8080")
     @GetMapping("/split-views/{id}")
     public Optional<SplitView> getCompositionById(@PathVariable Long id) {
         return splitViewRepository.findById(id);
     }
 
+    @CrossOrigin(origins = "http://localhost:8080")
     @DeleteMapping("split-views/{id}")
     public String deleteComposition(@PathVariable Long id) {
         System.out.println("DELETE COMPOSITION WITH ID : " + id);
@@ -34,6 +37,7 @@ public class SplitViewController {
         return "Done";
     }
 
+    @CrossOrigin(origins = "http://localhost:8080")
     @PostMapping("/split-views")
     public SplitView createComposition(@RequestBody SplitView splitView) {
         System.out.println("REST REQUEST to save SplitView : " + splitView);
@@ -46,6 +50,7 @@ public class SplitViewController {
         return newSplitView;
     }
 
+    @CrossOrigin(origins = "http://localhost:8080")
     @PutMapping("/split-views")
     public SplitView updateComposition(@RequestBody SplitView splitView) {
         System.out.println("REST REQUEST to update SplitView : " + splitView);

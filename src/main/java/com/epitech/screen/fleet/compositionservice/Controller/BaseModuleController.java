@@ -14,16 +14,19 @@ public class BaseModuleController {
     @Autowired
     private BaseModuleRepository baseModuleRepository;
 
+    @CrossOrigin(origins = "http://localhost:8080")
     @GetMapping("/base-modules")
     public List<BaseModule> getAllBaseModules() {
         return baseModuleRepository.findAll();
     }
 
+    @CrossOrigin(origins = "http://localhost:8080")
     @GetMapping("/base-modules/{id}")
     public Optional<BaseModule> getBaseModuleById(@PathVariable Long id) {
         return baseModuleRepository.findById(id);
     }
 
+    @CrossOrigin(origins = "http://localhost:8080")
     @DeleteMapping("base-modules/{id}")
     public String deleteBaseModule(@PathVariable Long id) {
         System.out.println("DELETE BaseModule WITH ID : " + id);
@@ -35,6 +38,7 @@ public class BaseModuleController {
         return "Done";
     }
 
+    @CrossOrigin(origins = "http://localhost:8080")
     @PostMapping("/base-modules")
     public BaseModule createBaseModule(@RequestBody BaseModule baseModule) {
         System.out.println("REST REQUEST to save BaseModule : " + baseModule);
@@ -48,6 +52,7 @@ public class BaseModuleController {
         return newBaseModule;
     }
 
+    @CrossOrigin(origins = "http://localhost:8080")
     @PutMapping("/base-modules")
     public BaseModule updateBaseModule(@RequestBody BaseModule baseModule) {
         System.out.println("REST REQUEST to update BaseModule : " + baseModule);
