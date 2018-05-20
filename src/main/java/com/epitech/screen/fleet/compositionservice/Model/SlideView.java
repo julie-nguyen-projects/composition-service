@@ -1,13 +1,19 @@
 package com.epitech.screen.fleet.compositionservice.Model;
 
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class SlideView extends AModule {
 
     private int nbSlides;
-    private ArrayList slides = new ArrayList();
+
+    @OneToMany
+    private List<BaseModule> slides = new ArrayList<>();
 
     public SlideView() {
     }
@@ -24,12 +30,11 @@ public class SlideView extends AModule {
         this.nbSlides = nbSlides;
     }
 
-
-    public ArrayList getSlides() {
+    public List<BaseModule> getSlides() {
         return slides;
     }
 
-    public void setSlides(ArrayList slides) {
+    public void setSlides(List<BaseModule> slides) {
         this.slides = slides;
     }
 }

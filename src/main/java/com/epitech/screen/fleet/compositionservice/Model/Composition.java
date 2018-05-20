@@ -10,9 +10,8 @@ public class Composition implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne(fetch = FetchType.LAZY,
-            cascade =  CascadeType.ALL,
-            mappedBy = "composition")
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "module_id")
     private AModule module;
 
     public Composition() {

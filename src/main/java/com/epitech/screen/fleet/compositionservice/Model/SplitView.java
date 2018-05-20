@@ -5,14 +5,13 @@ import javax.persistence.Entity;
 @Entity
 public class SplitView extends AModule {
 
-
-    // private AModule content1;
-    // private AModule content2;
+    private AModule content1;
+    private AModule content2;
     private TypeSplit typeSplit;
 
     public SplitView() {
     }
-/*
+
     public SplitView(AModule content1, AModule content2, TypeSplit typeSplit) {
         this.content1 = content1;
         this.content2 = content2;
@@ -33,7 +32,7 @@ public class SplitView extends AModule {
 
     public void setContent2(AModule content2) {
         this.content2 = content2;
-    }*/
+    }
 
     public TypeSplit getTypeSplit() {
         return typeSplit;

@@ -42,6 +42,7 @@ public class CompositionController {
     @PostMapping("/compositions")
     public Composition createComposition(@RequestBody Composition composition) {
         System.out.println("REST REQUEST to save Composition : " + composition);
+        System.out.println("%%%%% id : " + composition.getId());
 
         if (composition.getId() != null) {
             System.out.println("A new composition cannot have an ID");
